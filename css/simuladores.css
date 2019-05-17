@@ -1,0 +1,15 @@
+/* las clases que existen hasta ahora son: container, main-header, nav1, nav2, izquierda, derecha, regis (para registro y login) */
+
+/* creo que es muy buena practica ir poniendo comentarios de los cambios */
+
+*{
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1200px) {
+
+}
