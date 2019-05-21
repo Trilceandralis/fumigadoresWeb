@@ -3,13 +3,268 @@
 /* creo que es muy buena practica ir poniendo comentarios de los cambios */
 
 *{
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0;
+
+
+}
+ .encabezado-home{
+   background-color: black;
+   display: flex;
+
+ }
+
+ .logo-home{
+  margin: 0 auto;
+  height: 15vh;
+  align-content: center;
+  margin-top: 10px;
+
+ }
+ nav {
+   background-color: white;
+ }
+ nav ul{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   list-style-type: none;
+   width: 100vw;
+
+ }
+ nav ul li {
+   margin: 5px 5px;
+   background-color: #000000;
+   width: 110px;
+   text-align: center;
+   padding: 3px;
+ }
+
+nav ul li a {
+   color: white;
+   text-decoration: none;
+   margin: 5px;
+   font-size: 0.8rem;
+   font-family: sans-serif;
+ }
+ .section-home{
+  background-image: url(../imgs/bg-lluvia.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ #button-play {
+  height: 47px;
+  width: 100px;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  font-size: medium;
+ }
+
+/*Aca comienza el CSS de las demas paginas (Login, Preguntas, Register)*/
+
+
+
+
+  .container-body{
+  background-image: url(../imgs/bg-lluvia.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body-section {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80vh;
+  width: 70vw;
+}
+
+.nav-desplazado{
+  position: relative;
+  top: 190px;
+}
+.logo{
+  width: 22vw;
+  margin-top: 2vw;
+}
+.form-group{
+  margin-bottom: 30vw;
+  color: white;
+  font-family: sans-serif;
+
+}
+#button-ingresar{
+  height: 27px;
+  width: 65px;
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  font-size: small;
+  margin: 0;
+}
+#button-cancelar{
+  height: 27px;
+  width: 65px;
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  font-size: small;
+  margin: 0;
+}
+.recordarme{
+  text-align: center;
+  font-size: small;
+}
+
+.email-pass{
+  margin-bottom: 20px;
 
 }
 
-@media (min-width:768px) {
+/* estos cuatro ul es para preguntas */
+
+ul{
+      margin-top: 40px;
+}
+ul li{
+  display: flex;
+}
+
+ul ol{
+  display: flex;
+  flex-direction: column;
+}
+
+ul p{
+  display: flex;
+}
+
+
+
+form h2{
+  font-size: 1.5rem;
+    padding: 35px;
+    margin-top: 15px;
+}
+.alineacion-email-pass{
+  margin: 0;
+}
+.campos{
+  display: flex;
 
 }
 
-@media (min-width:1200px) {
+.botones-login{
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.fondo-campo{
+  opacity: 100;
+  background-color: #00000680;
+  border-color: white;
+  border-radius: 5px;
+  margin-top: 3px;
+  color: white;
+}
+
+@media (max-width:960px) {
+.logo{
+  width: 30vw;
+  margin-top: 2vw;
+}
+
+.form-group{
+  margin-bottom: 13vw;
+  color: white;
+  font-family: sans-serif;
+
+}
+#button-ingresar{
+  height: 27px;
+  width: 65px;
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  font-size: small;
+  margin: 0;
+}
+#button-cancelar{
+  height: 27px;
+  width: 65px;
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  font-size: small;
+  margin: 0;
+}
+.recordarme{
+  text-align: center;
+  font-size: small;
+}
+
+.email-pass{
+  margin-bottom: 20px;
+
+}
+
+form h2{
+  font-size: 1.8rem;
+  padding: 35px;
+}
+.alineacion-email-pass{
+  margin: 0;
+}
+.campos{
+  display: flex;
+  flex-direction: column;
+}
+
+.botones-login{
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.fondo-campo{
+  opacity: 100;
+  background-color: #00000680;
+  border-color: white;
+  border-radius: 5px;
+  margin-top: 3px;
+  color: white;
+}
+
+
+}
+
+@media (max-width:480px) {
+  nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+
+  }
+  nav ul li {
+    margin: 1px 0px;
+    background-color: #000000;
+    width: 100%;
+    text-align: center;
+    padding: 3px;
+  }
+
+
 
 }
