@@ -85,23 +85,25 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 80vh;
-  width: 70vw;
+  height: 90vh;
+  width: 80vw;
 }
+.nav-desplazado {
+    position: relative;
+    top: 35vh;
+   }
 
-.nav-desplazado{
-  position: relative;
-  top: 190px;
-}
 .logo{
   width: 22vw;
   margin-top: 2vw;
 }
 .form-group{
-  margin-bottom: 30vw;
+  margin-bottom: 10vw;
   color: white;
   font-family: sans-serif;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 #button-ingresar{
   height: 27px;
@@ -128,33 +130,19 @@ nav ul li a {
 
 .email-pass{
   margin-bottom: 20px;
-
+      margin: 62px;
+      font-size: 22px;
 }
 
-/* estos cuatro ul es para preguntas */
-
-ul{
-      margin-top: 40px;
-}
-ul li{
-  display: flex;
-}
-
-ul ol{
-  display: flex;
-  flex-direction: column;
-}
-
-ul p{
-  display: flex;
-}
+ .encabezado{
+   background-color: black;
+   display: flex;
+   }
 
 
-
-form h2{
+   form h2{
   font-size: 1.5rem;
-    padding: 35px;
-    margin-top: 15px;
+    margin-top: 15vh;
 }
 .alineacion-email-pass{
   margin: 0;
@@ -164,10 +152,12 @@ form h2{
 
 }
 
-.botones-login{
-  margin: 0;
-  display: flex;
-  justify-content: space-evenly;
+.botones-login {
+    margin: 0;
+        margin-top: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
 }
 
 .fondo-campo{
@@ -179,14 +169,44 @@ form h2{
   color: white;
 }
 
+/*preguntas*/
+
+.simuladoreglas{
+  width: 75vw;
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.simuladoreglas ol {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.reglas{
+  margin-bottom: 25px;
+  font-size: 23px;
+  text-align: justify;
+   }
 @media (max-width:960px) {
+
+  .body-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
+    width: 70vw;
+     }
 .logo{
   width: 30vw;
   margin-top: 2vw;
 }
 
 .form-group{
-  margin-bottom: 13vw;
+  margin-bottom: 15vw;
   color: white;
   font-family: sans-serif;
 
@@ -215,8 +235,9 @@ form h2{
 }
 
 .email-pass{
-  margin-bottom: 20px;
-
+    margin: 0px;
+    margin-bottom: 20px;
+    font-size: 16px;
 }
 
 form h2{
@@ -231,10 +252,13 @@ form h2{
   flex-direction: column;
 }
 
-.botones-login{
-  margin: 0;
-  display: flex;
-  justify-content: space-evenly;
+.botones-login {
+    margin: 0;
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    margin-top: 45px;
 }
 
 .fondo-campo{
@@ -246,10 +270,30 @@ form h2{
   color: white;
 }
 
+.nav-desplazado{
+  position: relative;
+  top: 190px;
+}
+/*REGLAS*/
+.simuladoreglas {
+    color: white;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+}
 
+
+.simuladoreglas ol {
+    display: flex;
+    flex-wrap: wrap;
+    width: 82vw;
+    height: 36vh;
+    margin-left: -47px;
 }
 
 @media (max-width:480px) {
+
+/*movil de home*/
+
   nav ul{
     display: flex;
     flex-direction: column;
@@ -264,7 +308,79 @@ form h2{
     text-align: center;
     padding: 3px;
   }
+  /*movil las demas*/
+  .container-body {
+    background-image: url(../imgs/bg-lluvia.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.body-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 68vw;
+    }
+  .nav-desplazado {
+    position: absolute;
+    top: 200px;
+    left: 0;
+}
 
+.nav-desplazado ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
 
+}
+.nav-desplazado ul li {
+  margin: 1px 0px;
+  background-color: #A0A0A0;
+  width: 100%;
+  text-align: center;
+  padding: 3px;
+}
+.logo {
+    width: 55vw;
+    margin-top: 11vw;
+}
 
+.form-group {
+    margin-bottom: 40vw;
+    color: white;
+    font-family: sans-serif;
+     }
+.registrarse{
+  padding: 25px;
+}
+form h2{
+
+  padding: 50px;
+}
+.simuladoreglas ol {
+    display: flex;
+    flex-wrap: wrap;
+    width: 58vw;
+    height: 35vh;
+    margin-bottom: 119px;
+}
+.simuladoreglas ol {
+    display: flex;
+    flex-wrap: wrap;
+    width: 58vw;
+    height: 35vh;
+    margin-bottom: 119px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+     }
+     .simuladoreglas ol li {
+    width: 52vw;
+    padding: 8px;
+    margin-right: 0px;
 }
