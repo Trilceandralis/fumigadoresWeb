@@ -1,3 +1,7 @@
+
+<?php
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -24,33 +28,29 @@
         <div class="body-section">
             <img src="imgs/logo.png" alt="logo" class="logo">
 
+// REVISAR CSS: clases "form-group", "fondo-campo". Todas las de INPUT.
+
           <form class="form-group" action="index.html" method="post">
             <h2>INICIAR SESIÓN</h2>
 
             <div class="campos">
 
-              <p class="email-pass">
-                <label for="nombre" class="alineacion-email-pass">
-                  Nombre
-                </label>
-                <br>
-                <input id="nombre" class="fondo-campo" type="text" name="nombre" value="" placeholder="Nombre" required>
-              </p>
 
-            <p class="email-pass">
-              <label for="email" class="alineacion-email-pass">
-                Email
-              </label>
-              <br>
+                <input id="nombre" class="fondo-campo" type="text" name="nombre" value="" placeholder="Nombre" required>
+
+
+
               <input id="email" class="fondo-campo" type="email" name="email" value="" placeholder="Email" required>
-            </p>
-            <p class="email-pass">
-              <label for="pass" class="alineacion-email-pass">
-                Contraseña
-              </label>
-              <br>
+
+
               <input id="pass" class="fondo-campo" type="password" name="pass" value="" placeholder="Password" required>
-            </p>
+
+
+              <input id="repass" class="fondo-campo" type="password" name="repass" value="" placeholder="Vuelva a ingresar su Password" required>
+
+
+
+
 
           </div>
             <p class="recordarme">
