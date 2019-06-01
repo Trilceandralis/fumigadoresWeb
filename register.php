@@ -1,5 +1,10 @@
 
 <?php
+require_once("Controladores/funcionesFUMI.php");
+/*if($_POST){
+  $errores = validar($_POST);
+
+}*/
 ?>
 
 <!DOCTYPE html>
@@ -47,10 +52,6 @@
 
 
               <input id="repass" class="fondo-campo" type="password" name="repass" value="" placeholder="Vuelva a ingresar su Password" required>
-
-
-
-
 
           </div>
             <p class="recordarme">
