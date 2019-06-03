@@ -5,10 +5,10 @@
   <img src="" alt="" class="">
   <nav class="nav1">
     <ul class="izquierda">
-      <li><a href="home.html"> HOME </a></li>
-      <li><a href="preguntas.html"> PREGUNTAS </a></li>
-      <li><a href="login.html"> LOGIN </a></li>
-      <li><a href="register.html"> REGISTRO </a></li>
+      <li><a href="home.php"> HOME </a></li>
+      <li><a href="preguntas.php"> PREGUNTAS </a></li>
+      <li><a href="login.php"> LOGIN </a></li>
+      <li><a href="register.php"> REGISTRO </a></li>
     </ul>
   </nav>
 </header>

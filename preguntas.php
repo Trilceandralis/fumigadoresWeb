@@ -9,10 +9,10 @@
     <header class="main-header">
       <nav class="nav-desplazado">
         <ul class="izquierda">
-          <li><a href="home.html"> HOME </a></li>
-          <li><a href="preguntas.html"> REGLAS</a></li>
-          <li><a href="login.html"> LOGIN </a></li>
-          <li><a href="register.html"> REGISTRO </a></li>
+          <li><a href="home.php"> HOME </a></li>
+          <li><a href="preguntas.php"> REGLAS</a></li>
+          <li><a href="login.php"> LOGIN </a></li>
+          <li><a href="register.php"> REGISTRO </a></li>
         </ul>
       </nav>
   </header>
