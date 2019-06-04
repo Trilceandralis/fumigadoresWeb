@@ -1,5 +1,4 @@
 <?php
-//Crear array de errores
 function validar($datos){
   $errores = [];
 
@@ -25,10 +24,10 @@ if (isset($datos["email"])){
 if (isset($datos["pass"])){
   $pass = trim($datos["pass"]);
   if (empty($pass)){
-    $errores["pass"] = "La contraseña no puede estar vacia"
+    $errores["pass"] = "La contraseña no puede estar vacia";
   }
   elseif(strlen($pass)<6){
-    $errores["pass"] = "La contraseña debe tener al menos 6 caracteres"
+    $errores["pass"] = "La contraseña debe tener al menos 6 caracteres";
   }
 }
 
@@ -40,12 +39,36 @@ if (isset($datos["repass"])){
   elseif ($repass != $pass) {
 $errores["repass"] = "Las contraseñas deben coincidir";
   }
+  return $errores;
 }
 
+//hay que decidir si vamos a tener imagen y agregar el imput para subir imágenes y la validación de las mismas
 
-
+function abrirJson($archivo){
+    if(file_exists($archivo)){
+        $json = file_get_contents($archivo);
+        $json = explode(PHP_EOL,$json);
+        array_pop($json);
+        foreach ($json as $key => $value) {
+            $arrayUsuarios[]=json_decode($value,true);
+        }
+        return $arrayUsuarios;
+    }
+    return null;
+}
 
 }
 
+function buscarPor($dato, $posicion){
+    $usuarios = abrirJSON("usuarios.json");
+
+    foreach ($usuarios as $key => $value) {
+
+        if($email == $value[$posicion]){
+            return $value;
+        }
+    }
+    return null;
+}
 
  ?>
