@@ -7,9 +7,8 @@ if(isset ($datos["nombre"])) {
   if (empty($nombre)) {
 $errores["nombre"] = "El nombre no puede estar vacio";
 }
-dd($nombre);
-// Armar if(): Si ya existe Base de Datos, elegir otro nombre
 }
+
 if (isset($datos["email"])){
   $email = trim($datos["email"]);
   if (empty($email)){
@@ -19,6 +18,7 @@ if (isset($datos["email"])){
     $errores["email"] = "El email no es valido";
   }
   //Arman if(): Si ya existe en Base de DAtos......
+
 }
 
 if (isset($datos["pass"])){
@@ -39,9 +39,9 @@ if (isset($datos["repass"])){
   elseif ($repass != $pass) {
 $errores["repass"] = "Las contraseñas deben coincidir";
   }
+  }
   return $errores;
 }
-
 //hay que decidir si vamos a tener imagen y agregar el imput para subir imágenes y la validación de las mismas
 
 function abrirJson($archivo){
@@ -59,12 +59,20 @@ function abrirJson($archivo){
 
 }
 
-function buscarPor($dato, $posicion){
+function buscarPor($email){
     $usuarios = abrirJSON("usuarios.json");
+    if($usuarios !== NULL){
+        foreach($usuarios as $usuario){
+          if($email === $usuario["email"]){
+            return $usuario;
+          }
+        }
+    }
+
 
     foreach ($usuarios as $key => $value) {
 
-        if($email == $value[$posicion]){
+        if($usuarios == $value[$posicion]){
             return $value;
         }
     }

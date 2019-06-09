@@ -1,10 +1,20 @@
 
 <?php
-require_once("Controladores/funcionesFUMI.php");
-/*if($_POST){
-  $errores = validar($_POST);
-
-}*/
+include_once("/Controladores/fumigaciones.php");
+if($_POST){
+  $errores= validar($datos, "register");
+  if(count($errores)==0) {
+    $usuario = buscarEmail($_POST["email"]);
+    if($usuario != NULL){
+      $errores["email"] = "Usuario ya registrado";
+  } else {
+    $avatar = armarAvatar($_FILES);
+    $registro = armarRegistro($_POST,$avatar);
+    guardarUsuario($registro);
+    header("location:login.php"); exit;
+  }
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +27,15 @@ require_once("Controladores/funcionesFUMI.php");
   </head>
   <body class="container-body">
     <div>
+      <?php
+    if(isset($errores)): ?>
+    <ul class="danger">
+      <?php foreach($errores as $key => $value) :?>
+        <li> <?= $value;?> </li>
+        <?php endforeach; ?>
+    </ul>
+  <?php endif;?>
+
       <header class="main-header">
         <nav class="nav-desplazado">
           <ul class="izquierda">
@@ -33,15 +52,17 @@ require_once("Controladores/funcionesFUMI.php");
         <div class="body-section">
             <img src="imgs/logo.png" alt="logo" class="logo">
 
-// REVISAR CSS: clases "form-group", "fondo-campo". Todas las de INPUT.
 
-          <form class="form-group" action="index.html" method="post">
+
+
+
+          <form class="form-group" action="" method="POST" enctype= "multipart/form-data" >
             <h2>INICIAR SESIÓN</h2>
 
             <div class="campos">
 
 
-                <input id="nombre" class="fondo-campo" type="text" name="nombre" value="" placeholder="Nombre" required>
+              <input id="nombre" class="fondo-campo" type="text" name="nombre" value="" placeholder="Nombre"/>
 
 
 
@@ -53,16 +74,18 @@ require_once("Controladores/funcionesFUMI.php");
 
               <input id="repass" class="fondo-campo" type="password" name="repass" value="" placeholder="Vuelva a ingresar su Password" required>
 
+              <input type="file" name="avatar" value="" placeholder="Insertar imagen">
+
           </div>
             <p class="recordarme">
-              <input type="checkbox" name="rem" id="rec" value="r"> Recordarme
+              <input type="checkbox" name="recordar" id="rec" value="r"> Recordarme
             </p>
             <br>
             <div class="botones-login">
 
-              <button id="button-ingresar" type="submit" name="button"> Ingresar </button>
+              <button id="button-ingresar" type="submit" name="button"> Registrarse </button>
 
-              <button id="button-cancelar" type="submit" name="button"> Cancelar </button>
+              <button id="button-cancelar" type="reset" name="button"> Cancelar </button>
 
             </div>
           </form>
