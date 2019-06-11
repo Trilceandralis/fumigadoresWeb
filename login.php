@@ -1,3 +1,32 @@
+<?php
+
+include_once("controladores/funcionesFUMI.php");
+if($_POST){
+  
+  $errores= validar($_POST,"login");
+  if(count($errores)==0){
+    $usuario = buscarEmail($_POST["email"]);
+    if($usuario == null){
+      $errores["email"]="Usuario no existe";
+    }else{
+      if(password_verify($_POST["pass"],$usuario["pass"])===false){
+        $errores["pass"]="Error en los datos verifique";
+      }else{
+        seteoUsuario($usuario,$_POST);
+        if(validarUsuario()){
+          header("location: home.php");
+          exit;
+        }else{
+          header("location: register.php");
+          exit;
+        }
+      }
+    }
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -24,7 +53,7 @@
         <div class="body-section">
             <img src="imgs/logo.png" alt="logo" class="logo">
 
-          <form class="form-group" action="index.html" method="post">
+          <form class="form-group" action="" method="post">
             <h2>INICIAR SESIÓN</h2>
 
             <div class="campos">
