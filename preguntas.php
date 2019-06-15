@@ -1,3 +1,7 @@
+<?php
+include_once("controladores/funcionesFUMI.php");
+?>
+
 <html dir="ltr" lang="en"><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +11,13 @@
 <body class="container-body">
   <div>
     <header class="main-header">
-      <nav class="nav-desplazado">
-        <ul class="izquierda">
-          <li><a href="home.php"> HOME </a></li>
-          <li><a href="preguntas.php"> REGLAS</a></li>
-          <li><a href="login.php"> LOGIN </a></li>
-          <li><a href="register.php"> REGISTRO </a></li>
-        </ul>
-      </nav>
+      <?php
+      if(isset($_SESSION["nombre"])){
+  include_once("headers/loggeado.php");
+  }else{
+  include_once("headers/noLoggeado.php");}
+
+  ?>
   </header>
   <main>
     <section class="regis">

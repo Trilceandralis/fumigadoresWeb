@@ -1,3 +1,7 @@
+<?php
+include_once("controladores/funcionesFUMI.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -15,14 +19,13 @@
 
               </div>
 
-        <nav class="nav">
-          <ul class="izquierda">
-            <li><a href="home.php"> HOME </a></li>
-            <li><a href="preguntas.php"> REGLAS</a></li>
-            <li><a href="login.php"> LOGIN </a></li>
-            <li><a href="register.php"> REGISTRO </a></li>
-          </ul>
-        </nav>
+              <?php
+              if(isset($_SESSION["nombre"])){
+        include_once("headers/loggeado.php");
+      }else{
+        include_once("headers/noLoggeado.php");}
+
+      ?>
     </header>
 
       <section class="section-home">

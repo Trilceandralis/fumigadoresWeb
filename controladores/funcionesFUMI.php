@@ -10,13 +10,15 @@ function dd($valor){
     echo "</pre>";
 }
 
-function validar($datos){
+function validar($datos, $bandera){
     $errores = [];
 
+if($bandera=="register"){
     $nombre = trim($datos["nombre"]);
     if (empty($nombre)){
         $errores["nombre"]="Complete su nombre";
     }
+  }
     $email = trim($datos["email"]);
     if(empty($email)){
         $errores["email"]="Complete su email";
@@ -25,15 +27,20 @@ function validar($datos){
 
     }
     $pass = trim($datos["pass"]);
+    if($bandera=="register"){
     $repass = trim($datos["repass"]);
     if(empty($pass)){
         $errores["pass"] = "Introduzca su contraseña";
-    }elseif (strlen($pass)<8) {
+    }
+    elseif (strlen($pass)<8) {
         $errores["pass"] = "La contraseña debe tener mínimo ocho caracteres";
     }elseif ($pass != $repass) {
         $errores["repass"]= "Las contraseñas no coinciden";
     }
-    if(isset($_FILES)){
+    }
+    if($bandera == "register"){
+
+        if(isset($_FILES)){
         if($_FILES["avatar"]["error"] !=UPLOAD_ERR_OK){
             $errores["avatar"]="No olvides subir tu imagen";
         }
@@ -43,6 +50,7 @@ function validar($datos){
             $errores["avatar"]="Tu imagen debe tener un formato .jpg ó .png";
         }
     }
+  }
 
 return $errores;
 }

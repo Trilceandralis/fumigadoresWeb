@@ -61,6 +61,7 @@ if($_POST){
             <img src="imgs/logo.png" alt="logo" class="logo">
 
           <form class="form-group" action="" method="post">
+            <h3> Recuperaste tu contraseña.</h3>
             <h2>INICIAR SESIÓN</h2>
 
             <div class="campos">

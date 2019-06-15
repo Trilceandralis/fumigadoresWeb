@@ -1,25 +1,19 @@
 <?php
 include_once("controladores/funcionesFUMI.php");
-if ($_POST){
-  $errores=validar($_POST,"registro");
+if($_POST){
+  $errores= validar($_POST,"olvide");
   if(count($errores)==0){
     $usuario = buscarEmail($_POST["email"]);
-    if($usuario !== null){
-      $errores["email"]="Usuario ya registrado";
+    if($usuario == null){
+      $errores["email"]="Usuario no existe en nuestra base de datos";
     }else{
-      $avatar = armarAvatar($_FILES);
-      $registro = armarRegistro($_POST,$avatar);
-      guardarUsuario($registro);
-      header("location:login.php");
-      exit;
+        $registro = armarRegistroOlvide($_POST);
+          header("location: passRecuperada.php");
+          exit;
     }
-
   }
 }
-
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -54,11 +48,9 @@ if ($_POST){
 
 
           <form class="form-group" action="" method="POST" enctype= "multipart/form-data" >
-            <h2>INICIAR SESIÓN</h2>
+            <h2>MODIFICAR CONTRASEÑA</h2>
 
             <div class="campos">
-
-              <input id="nombre" class="fondo-campo" type="text" name="nombre" value="<?= (isset($errores["nombre"]))? "" : persistir("nombre"); ?>" placeholder="Nombre" />
 
               <input id="email" class="fondo-campo" type="email" name="email" value="<?=(isset($errores["email"]))? "" : persistir("email");?>" placeholder="Email"/>
 
@@ -68,16 +60,13 @@ if ($_POST){
 
               <input id="repass" class="fondo-campo" type="password" name="repass" value="" placeholder="Reingrese Password" required>
 
-              <input type="file" name="avatar" value="" placeholder="Insertar imagen" />
+
 
           </div>
-            <p class="recordarme">
-              <input type="checkbox" name="recordar" id="rec" value="" /> Recordarme
-            </p>
             <br>
             <div class="botones-login">
 
-              <button id="button-ingresar" type="submit"> Registrarse </button>
+              <button id="button-ingresar" type="submit"> Enviar </button>
 
               <button id="button-cancelar" type="reset"> Cancelar </button>
 
