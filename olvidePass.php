@@ -1,7 +1,7 @@
 <?php
 include_once("controladores/funcionesFUMI.php");
-if($_POST){
-  $errores= validar($_POST,"olvide");
+if ($_POST){
+  $errores=validar($_POST,"olvidePass");
   if(count($errores)==0){
     $usuario = buscarEmail($_POST["email"]);
     if($usuario == null){

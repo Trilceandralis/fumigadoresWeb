@@ -27,7 +27,7 @@ if($bandera=="register"){
 
     }
     $pass = trim($datos["pass"]);
-    if($bandera=="register"){
+    if($bandera=="register" || $bandera=="olvidePass"){
     $repass = trim($datos["repass"]);
     if(empty($pass)){
         $errores["pass"] = "Introduzca su contraseña";
@@ -116,6 +116,26 @@ function buscarEmail($email){
     }
 
     return null;
+}
+
+function armarRegistroOlvide($datos){
+    $usuarios = abrirBaseDatos();
+
+    foreach ($usuarios as $key=>$usuario) {
+
+        if($datos["email"]==$usuario["email"]){
+
+            $usuario["pass"]= password_hash($datos["pass"],PASSWORD_DEFAULT);
+            $usuarios[$key] = $usuario;
+        }
+        $usuarios[$key] = $usuario;
+    }
+
+    unlink("usuarios.json");
+    foreach ($usuarios as  $usuario) {
+        $jsusuario = json_encode($usuario);
+        file_put_contents('usuarios.json',$jsusuario. PHP_EOL,FILE_APPEND);
+    }
 }
 
 

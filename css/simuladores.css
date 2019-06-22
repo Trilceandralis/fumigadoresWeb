@@ -171,6 +171,15 @@ nav ul li a {
   color: white;
   height: 30px;
 }
+/* PASS RECUPERADA */
+.passModificada a{
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  padding: 5px;
+}
+
+
 
 /*preguntas*/
 
@@ -294,6 +303,7 @@ form h2{
 }
 
 @media (max-width:480px) {
+
 
 /*movil de home*/
 

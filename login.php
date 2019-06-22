@@ -10,7 +10,7 @@ if($_POST){
       $errores["email"]="Usuario no existe";
     }else{
       if(password_verify($_POST["pass"],$usuario["pass"])===false){
-        $errores["pass"]="Error en los datos verifique";
+        $errores["pass"]="Usuario o contraseña incorrecto. Verifique los campos, por favor.";
       }else{
         seteoUsuario($usuario,$_POST);
         if(validarUsuario()){
