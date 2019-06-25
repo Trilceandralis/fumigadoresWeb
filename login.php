@@ -37,7 +37,7 @@ if($_POST){
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/simuladores.css">
+    <link rel="stylesheet" href="css/lampone.css">
     <title> Los Simuladores </title>
   </head>
   <body class="container-body">
@@ -49,52 +49,48 @@ if($_POST){
             <?php endforeach;
             echo "</ul>";
             endif;?>
+
+
+
       <header class="main-header">
 
+        <img src="imgs/logo.png" alt="logo" class="logo">
         <?php include_once("headers/noLoggeado.php");?>
 
     </header>
 
       <main>
-        <section class="regis">
-        <div class="body-section">
-            <img src="imgs/logo.png" alt="logo" class="logo">
 
-          <form class="form-group" action="" method="post">
-            <h2>INICIAR SESIÓN</h2>
+
+        <section class="body-section">
+
+
+          <h2>INICIAR SESIÓN</h2>
+
+          <form class="formulario" action="" method="post">
 
             <div class="campos">
 
-            <p class="email-pass">
-              <label for="email" class="alineacion-email-pass">
-                Email
-              </label>
-              <br>
-              <input id="email" class="fondo-campo" type="email" name="email" value="" placeholder="Email" required>
-            </p>
-            <p class="email-pass">
-              <label for="pass" class="alineacion-email-pass">
-                Contraseña
-              </label>
-              <br>
-              <input id="pass" class="fondo-campo" type="password" name="pass" value="" placeholder="Password" required>
-            </p>
 
-          </div>
-            <p class="recordarme">
-              <input type="checkbox" name="rem" id="rec" value="r"> Recordarme
-            </p>
-            <br>
+              <input id="email" class="fondo-campo" type="email" name="email" value="" placeholder="Email" required>
+
+              <input id="pass" class="fondo-campo" type="password" name="pass" value="" placeholder="Password" required>
+
+            </div>
+
+            <label id="recordarme">
+              <input type="checkbox" name="rem"  value="r"> Recordarme
+            </label>
+
+
             <div class="botones-login">
 
-              <button id="button-ingresar" type="submit" name="button"> Ingresar </button>
+              <button id="button" type="submit" name="button"> Ingresar </button>
 
-              <a id="button-cancelar" type="button" href="olvidePass.php" name="button"> Olvide mi contraseña </a>
+              <a id="button-olvide" type="button" href="olvidePass.php" name="button"> Olvide mi contraseña </a>
 
             </div>
           </form>
-
-        </div>
         </section>
       </main>
     </div>

@@ -90,6 +90,13 @@ nav ul li a {
   height: 90vh;
   width: 80vw;
 }
+
+.main-header {
+background-color: rgba(0, 0, 0, 0.5);
+width: 80vw;
+
+}
+
 .nav-desplazado {
     position: relative;
     top: 35vh;
@@ -107,7 +114,7 @@ nav ul li a {
   flex-direction: column;
   justify-content: end;
 }
-#button-ingresar{
+#button{
   height: 27px;
   width: 65px;
   background-color: black;
@@ -115,15 +122,7 @@ nav ul li a {
   border-radius: 6px;
   font-size: small;
   margin: 0;
-}
-#button-cancelar{
-  height: 27px;
-  width: 65px;
-  background-color: black;
-  color: white;
-  border-radius: 6px;
-  font-size: small;
-  margin: 0;
+
 }
 .recordarme{
   text-align: center;
@@ -142,7 +141,7 @@ nav ul li a {
    }
 
 
-   form h2{
+  section.body-section h2{
   font-size: 1.5rem;
     margin-top: 15vh;
 }
@@ -156,7 +155,7 @@ nav ul li a {
 
 .botones-login {
     margin: 0;
-        margin-top: 0px;
+    margin-top: 0px;
     display: flex;
     justify-content: space-evenly;
     position: relative;
