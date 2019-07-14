@@ -8,10 +8,13 @@
 
 .container-body{
   background-image: url(../imgs/imagen-vertical-2.png);
-  display: flex;
-  background-size: 160vw;
+  /* display: flex; */
+  background-size: cover;
+  background-repeat: no-repeat;
+
 
 }
+
 
 .main-header {
 background-color: rgba(0, 0, 0, 0.9);
@@ -46,6 +49,21 @@ padding-top: 5vh;
 
 }
 
+.reglas-juego{
+
+}
+
+section.body-section ol li{
+font-size: 1.5rem;
+color: white;
+text-align: center;
+font-family: sans-serif;
+font-size: 1rem;
+margin-bottom: 0.5;
+padding-top: 5vh;
+
+}
+
 .formulario {
 
 }
@@ -53,7 +71,6 @@ padding-top: 5vh;
 
 
 .campos{
-  display: flex;
   flex-direction: column;
   margin-bottom: 2vh;
 
@@ -89,6 +106,17 @@ color: white;
 border-radius: 10px;
 font-size: 1rem;
 padding: 2%;
+}
+
+#reingresar{
+background-color: black;
+color: white;
+border-radius: 10px;
+font-size: 1rem;
+padding: 2%;
+list-style-type: none;
+font-family: sans-serif;
+text-decoration: none;
 }
 
 #button-olvide{

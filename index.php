@@ -7,7 +7,7 @@ include_once("controladores/funcionesFUMI.php");
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/simuladores.css">
+    <link rel="stylesheet" href="">
     <title> Los Simuladores </title>
   </head>
   <body>
@@ -15,7 +15,7 @@ include_once("controladores/funcionesFUMI.php");
       <header class="main-header">
         <div class="encabezado-home">
 
-          <img src="imgs/logo.png" alt="logo" class="logo-home">
+          <img src="imgs/logo.png" alt="logo" class="logo">
 
               </div>
 

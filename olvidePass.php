@@ -21,7 +21,7 @@ if ($_POST){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/simuladores.css">
+    <link rel="stylesheet" href="css/lampone.css">
     <title> Los Simuladores </title>
   </head>
   <body class="container-body">
@@ -34,21 +34,19 @@ if ($_POST){
             echo "</ul>";
             endif;?>
       <header class="main-header">
+        <img src="imgs/logo.png" alt="logo" class="logo">
+
         <?php include_once("headers/noLoggeado.php");?>
 
     </header>
 
       <main>
-        <section class="regis">
-        <div class="body-section">
-            <img src="imgs/logo.png" alt="logo" class="logo">
+        <section class="body-section">
 
-
-
-
+          <h2>MODIFICAR CONTRASEÑA</h2>
 
           <form class="form-group" action="" method="POST" enctype= "multipart/form-data" >
-            <h2>MODIFICAR CONTRASEÑA</h2>
+
 
             <div class="campos">
 
@@ -66,14 +64,14 @@ if ($_POST){
             <br>
             <div class="botones-login">
 
-              <button id="button-ingresar" type="submit"> Enviar </button>
+              <button id="button" type="submit"> Enviar </button>
 
-              <button id="button-cancelar" type="reset"> Cancelar </button>
+              <button id="button" type="reset"> Cancelar </button>
 
             </div>
           </form>
 
-        </div>
+
         </section>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
